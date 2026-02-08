@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InterfaceManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class InterfaceManager : MonoBehaviour
     [Header("UI Components")]
     public GameObject examinationPanel;
     public Image examinationImage;
+    public TextMeshProUGUI examinationDescription;
 
     private void Awake()
     {
@@ -43,17 +45,17 @@ public class InterfaceManager : MonoBehaviour
         {
             case EvidenceCategory.Document:
                 examinationImage.transform.localScale = Vector3.one * 0.3f;
-                Debug.Log("This is the classified document from 1980s.");
+                examinationDescription.text="This is the classified document from 1980s.";
                 break;
 
             case EvidenceCategory.Physical:
                 examinationImage.transform.localScale = Vector3.one * 0.5f;
-                Debug.Log("A flash drive containing a series of photos, nothing interesting appears.");
+                examinationDescription.text = "A flash drive containing a series of photos, nothing interesting appears.";
                 break;
 
             case EvidenceCategory.Policing:
                 examinationImage.transform.localScale = Vector3.one * 0.5f;
-                Debug.Log("Your stuff, treat them carefully.");
+                examinationDescription.text = "Your stuff, treat them carefully.";
                 break;
 
             default:
