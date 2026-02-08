@@ -8,9 +8,9 @@ public class Evidence : MonoBehaviour
 {
 
     public EvidenceCategory koreEvi;
-    //public Sprite examedDisplay;
+    public Sprite examedDisplay;
 
-    private Vector3 itemOffset;
+    private Vector3 itemOffset;  
     private bool isDragging = false;
 
     private SpriteRenderer koreSR;
@@ -54,7 +54,7 @@ public class Evidence : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1) && !isDragging)
         {
-            //InterfaceManager.Instance.ExamineEvidence(this);
+            InterfaceManager.Instance.ExamineEvidence(this);
         }
     }
 
